@@ -1,14 +1,14 @@
 <template>
-  <v-app style="margin: 0; height: 100vh; background-color: coral;">
+  <v-app style="margin: 0;">
     <Navbar />
-    <HelloWorld />
-    <v-spacer />
-    <HelloWorld />
+    <FirstPage />
+    <AboutUs />
     <v-main />
   </v-app>
 </template>
 
 <script lang="ts" setup>
   import Navbar from "@/components/navigation_bar.vue"
-  import HelloWorld from "./components/HelloWorld.vue";
+  import FirstPage from "./components/first_page.vue";
+  import AboutUs from "./components/about_us.vue";
 </script>
