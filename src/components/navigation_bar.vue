@@ -1,6 +1,6 @@
 <template>
   <v-app
-    style="height: 7vh; background-color: transparent !important; position: fixed;
+    style="height: 7vh; background-color: red; position: fixed;
     top: 0;
     left: 0;
     right: 0;
