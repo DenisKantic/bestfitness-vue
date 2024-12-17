@@ -16,6 +16,7 @@ declare module 'vue' {
     Nav_bar: typeof import('./src/components/nav_bar.vue')['default']
     Navbar: typeof import('./src/components/navbar.vue')['default']
     Navigation_bar: typeof import('./src/components/navigation_bar.vue')['default']
+    Programs: typeof import('./src/components/programs.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

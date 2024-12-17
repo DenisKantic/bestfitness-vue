@@ -142,7 +142,10 @@
   .text-box {
     width: 60%;
     max-width: 700px;
-    top: 25%;
+    position: relative;
+    top: 15%;
+    left: 20%;
+    margin-right: 2rem;
     padding: 25px;
   }
 
