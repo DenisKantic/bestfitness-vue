@@ -40,13 +40,11 @@
           Leonardo
         </v-btn>
 
-        <v-btn color="secondary"
-          ><v-icon
-            href="mailto:abest2802@gmail.com"
-            style="margin-right: 0.5rem; z-index: 2"
-            >mdi-email</v-icon
-          >
-          Andrea</v-btn
+        <v-btn
+          color="secondary"
+          href="mailto:abest2802@gmail.com"
+          style="z-index: 2"
+          ><v-icon style="margin-right: 0.5rem">mdi-email</v-icon> Andrea</v-btn
         >
       </div>
     </div>
