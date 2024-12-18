@@ -2,11 +2,16 @@
   <v-app style="margin: 0; background-color: #1f1f1f">
     <Navbar />
     <FirstPage />
-    <!-- <AboutUs /> -->
+    <AboutUs />
     <Benefits />
     <Advantages />
     <Programs />
-    <v-main />
+
+    <v-footer color="red" height="5vh">
+      <span class="text-white" style="text-align: center; width: 100%">
+        Best Fitness 2024 <v-icon small class="ml-2">mdi-copyright</v-icon>
+      </span>
+    </v-footer>
   </v-app>
 </template>
 

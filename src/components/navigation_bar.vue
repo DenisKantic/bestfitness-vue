@@ -5,7 +5,13 @@
   >
     <v-navigation-drawer v-model="drawer" disable-resize-watcher>
       <v-list nav>
-        <v-list-item v-for="(item, i) in items" :key="i" :active="i === 0" link>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :active="isActive(item.text)"
+          @click="scrollToSection(item.text)"
+          link
+        >
           <v-list-item-title>{{ item.text }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -25,9 +31,10 @@
         <v-btn
           v-for="(item, i) in items"
           :key="i"
-          :active="i === 0"
+          :active="isActive(item.text)"
           class="me-2 text-none"
           style="font-size: 1.2rem"
+          :href="`#${item.text.toLowerCase()}`"
         >
           {{ item.text }}
         </v-btn>
@@ -38,7 +45,6 @@
       <template #append>
         <v-btn
           class="ms-1"
-          btn
           style="
             background-color: white;
             color: black;
@@ -67,7 +73,30 @@ export default {
       { text: "Programs" },
     ];
 
-    return { drawer, items };
+    // Function to check if the section is active
+    const isActive = (section: string) => {
+      const element = document.getElementById(section.toLowerCase());
+      const rect = element?.getBoundingClientRect();
+      return rect && rect.top <= 0 && rect.bottom > 0;
+    };
+
+    // Scroll to the section when an item is clicked
+    const scrollToSection = (section: string) => {
+      const element = document.getElementById(section.toLowerCase());
+      if (element) {
+        const offset = 60;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+      drawer.value = false; // Close the drawer after clicking an item (for mobile)
+    };
+
+    return { drawer, items, isActive, scrollToSection };
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div
+    id="advantages"
     class="d-flex flex-column ma-auto bg-container"
     style="
       min-height: 80vh;
@@ -183,6 +184,11 @@ export default {
   .v-col .v-btn {
     font-size: 1.1rem;
   }
+
+  .grid-container {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Large devices (desktops) */
@@ -192,14 +198,15 @@ export default {
   }
 
   .grid-container {
-    padding: 2rem 0;
+    padding: 2rem 0rem;
+    margin-bottom: 2rem;
     height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  /* 
+  /*
     .advantage-grid{
         gap: 2rem;
     } */

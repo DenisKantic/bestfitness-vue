@@ -11,6 +11,7 @@ declare module 'vue' {
     Advantages: typeof import('./src/components/advantages.vue')['default']
     Benefits: typeof import('./src/components/benefits.vue')['default']
     First_page: typeof import('./src/components/first_page.vue')['default']
+    Footer: typeof import('./src/components/footer.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Home_page: typeof import('./src/components/home_page.vue')['default']
     Nav_bar: typeof import('./src/components/nav_bar.vue')['default']

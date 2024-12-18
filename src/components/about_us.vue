@@ -1,8 +1,12 @@
 <template>
-  <div class="about_us_container">
+  <div class="about_us_container" id="about">
     <!-- Left side: Image -->
     <div class="left-side">
-      <v-img src="/src/assets/people.svg" alt="People Image" />
+      <v-img
+        class="image_people"
+        src="/src/assets/people.svg"
+        alt="People Image"
+      />
     </div>
 
     <div class="right-side">
@@ -45,18 +49,19 @@
 <style scoped>
 .about_us_container {
   display: flex;
-  height: 100vh;
-  padding: 0 5rem;
+  height: auto;
+  padding: 2rem 5rem;
   justify-content: center;
   align-items: center;
 }
 
 .left-side {
   flex: 1;
-  height: 80vh;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 2rem;
 }
 
 .image {
@@ -69,7 +74,7 @@
   color: white !important;
   flex: 1;
   display: flex;
-  height: 80vh;
+  height: 80%;
   flex-direction: column;
   justify-content: center;
   text-align: start;
@@ -81,5 +86,25 @@
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1100px) {
+  .about_us_container {
+    flex-direction: column !important;
+    height: auto !important;
+    margin-top: 2rem;
+  }
+
+  .left-side {
+    visibility: hidden;
+  }
+
+  .image {
+    visibility: hidden;
+  }
+
+  .right-side {
+    height: auto !important;
+  }
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div
-    style="min-height: 100vh; width: 100%; padding: 0 5rem"
+    id="programs"
+    style="height: 100vh; width: 100%; padding: 0 5rem"
     class="d-flex flex-column items-center justify-center container"
   >
     <h1 style="font-size: 2rem; text-align: center" class="title">Programs</h1>
@@ -204,7 +205,7 @@ export default {
   .container {
     padding: 2rem !important; /* Adjust padding for smaller screens */
     width: 100% !important;
-    height: auto;
+    height: auto !important;
   }
 
   .text-box {
@@ -231,7 +232,6 @@ export default {
     width: 60%;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="home">
     <div class="text-box">
       <span class="text-h2"
         >The possibilities are endless.Transform your life</span
