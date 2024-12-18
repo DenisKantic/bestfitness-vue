@@ -1,6 +1,7 @@
 <template>
-  <v-app
-    style="height: 2vh; position: fixed; top: 0; left: 0; right: 0; z-index: 10"
+  <div
+    class="nav-container"
+    style="height: 2vh; position: fixed; top: 0; left: 0; right: 0"
   >
     <v-navigation-drawer v-model="drawer" disable-resize-watcher>
       <v-list nav>
@@ -49,7 +50,7 @@
         </v-btn>
       </template>
     </v-app-bar>
-  </v-app>
+  </div>
 </template>
 
 <script lang="ts">
@@ -62,11 +63,25 @@ export default {
     const items = [
       { text: "Home" },
       { text: "About" },
+      { text: "Benefits" },
       { text: "Programs" },
-      { text: "Testimonials" },
     ];
 
     return { drawer, items };
   },
 };
 </script>
+
+<style scoped>
+.v-navigation-drawer {
+  z-index: 2000; /* Higher z-index for the navigation drawer */
+}
+
+.v-app-bar {
+  z-index: 2100; /* Ensure the app bar stays on top of everything */
+}
+
+.nav-container {
+  z-index: 1000;
+}
+</style>

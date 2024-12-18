@@ -1,10 +1,10 @@
 <template>
   <v-app style="margin: 0; background-color: #1f1f1f">
     <Navbar />
-    <!-- <FirstPage />
-    <AboutUs />
+    <FirstPage />
+    <!-- <AboutUs /> -->
     <Benefits />
-    <Advantages /> -->
+    <Advantages />
     <Programs />
     <v-main />
   </v-app>
